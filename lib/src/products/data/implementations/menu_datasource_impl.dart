@@ -1,9 +1,6 @@
-import 'dart:convert';
-import 'dart:ffi';
-
-import 'package:events_time_app_client/src/features/products/data/interfaces/menu_datasource.dart';
-import 'package:events_time_app_client/src/features/products/domain/models/menu_model.dart';
 import 'package:events_time_microapp_dependencies/events_time_microapp_dependencies.dart';
+import 'package:events_time_microapp_menu/src/products/data/interfaces/menu_datasource.dart';
+import 'package:events_time_microapp_menu/src/products/domain/models/menu_model.dart';
 
 class MenuDatasourceImpl implements IMenuDatasource {
   static const String ENDPOINT_MENU_ID = '/api/mobile/products/menu';
@@ -14,7 +11,7 @@ class MenuDatasourceImpl implements IMenuDatasource {
   });
 
   @override
-  Future<MenuModel> getMenu(Int eventId) async {
+  Future<MenuModel> getMenu(int eventId) async {
     final RequestingResponse<dynamic> response = await requesting.post(
       ENDPOINT_MENU_ID,
       queryParameters: {

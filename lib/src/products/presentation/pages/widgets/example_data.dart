@@ -1,5 +1,3 @@
-import 'package:events_time_app_client/src/features/commons/utils/strings/assets_images_strings.dart';
-
 class ExampleData {
   ExampleData._internal();
 
@@ -24,7 +22,7 @@ class ExampleData {
           description:
               'Duas Junior Ribs servidas com dois acompanhamentos, perfeitas para quem está em dupla. Combine com um dos nossos molhos: Barbecue ou Billabong. Acrescente um acompanhamento extra com um preço especial.',
           comparePrice: r'$ 198,00',
-          imageUrl: AssetsImagesStrings.ribs,
+          imageUrl: '', //image here,
           isHotSale: false,
         );
       },
@@ -42,7 +40,7 @@ class ExampleData {
           description:
               'Duas Junior Ribs servidas com dois acompanhamentos, perfeitas para quem está em dupla. Combine com um dos nossos molhos: Barbecue ou Billabong. Acrescente um acompanhamento extra com um preço especial.',
           comparePrice: "\$250,00",
-          imageUrl: AssetsImagesStrings.ribs,
+          imageUrl: '', //image here,
           isHotSale: false,
         );
       },
@@ -60,7 +58,7 @@ class ExampleData {
           description:
               'Duas Junior Ribs servidas com dois acompanhamentos, perfeitas para quem está em dupla. Combine com um dos nossos molhos: Barbecue ou Billabong. Acrescente um acompanhamento extra com um preço especial.',
           comparePrice: "\$250,00",
-          imageUrl: AssetsImagesStrings.ribs,
+          imageUrl: '', //image here,
           isHotSale: false,
         );
       },
@@ -78,7 +76,7 @@ class ExampleData {
           description:
               'Duas Junior Ribs servidas com dois acompanhamentos, perfeitas para quem está em dupla. Combine com um dos nossos molhos: Barbecue ou Billabong. Acrescente um acompanhamento extra com um preço especial.',
           comparePrice: "\$250,00",
-          imageUrl: AssetsImagesStrings.ribs,
+          imageUrl: '', //image here,
           isHotSale: false,
         );
       },
@@ -96,7 +94,7 @@ class ExampleData {
           description:
               'Duas Junior Ribs servidas com dois acompanhamentos, perfeitas para quem está em dupla. Combine com um dos nossos molhos: Barbecue ou Billabong. Acrescente um acompanhamento extra com um preço especial.',
           comparePrice: "\$250,00",
-          imageUrl: AssetsImagesStrings.ribs,
+          imageUrl: '', //image here,
           isHotSale: false,
         );
       },
@@ -114,7 +112,7 @@ class ExampleData {
           description:
               'Duas Junior Ribs servidas com dois acompanhamentos, perfeitas para quem está em dupla. Combine com um dos nossos molhos: Barbecue ou Billabong. Acrescente um acompanhamento extra com um preço especial.',
           comparePrice: "\$250,00",
-          imageUrl: AssetsImagesStrings.ribs,
+          imageUrl: '', //image here,
           isHotSale: false,
         );
       },
@@ -132,7 +130,7 @@ class ExampleData {
           description:
               'Duas Junior Ribs servidas com dois acompanhamentos, perfeitas para quem está em dupla. Combine com um dos nossos molhos: Barbecue ou Billabong. Acrescente um acompanhamento extra com um preço especial.',
           comparePrice: "\$250,00",
-          imageUrl: AssetsImagesStrings.ribs,
+          imageUrl: '', //image here,
           isHotSale: false,
         );
       },

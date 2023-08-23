@@ -1,5 +1,3 @@
-import 'package:events_time_app_client/src/features/products/domain/models/product_model.dart';
-
 class StandModel {
   final String name;
   final bool isCashier;

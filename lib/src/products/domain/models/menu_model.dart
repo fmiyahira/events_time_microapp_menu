@@ -1,5 +1,6 @@
-import 'package:events_time_app_client/src/features/products/domain/models/product_model.dart';
 import 'dart:convert';
+
+import 'package:events_time_microapp_menu/src/products/domain/models/product_model.dart';
 
 class MenuModel {
   final String name;

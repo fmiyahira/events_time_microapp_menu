@@ -1,7 +1,5 @@
-import 'dart:ffi';
-
-import 'package:events_time_app_client/src/features/products/domain/models/menu_model.dart';
+import 'package:events_time_microapp_menu/src/products/domain/models/menu_model.dart';
 
 abstract class IGetMenuUsecaseInterface {
-  Future<MenuModel?> call(Int eventId);
+  Future<MenuModel?> call(int eventId);
 }

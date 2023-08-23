@@ -1,8 +1,8 @@
-import 'package:events_time_app_client/src/features/auth/presentation/pages/perfil/widgets/increment_item_widget.dart';
-import 'package:events_time_app_client/src/features/commons/utils/strings/assets_images_strings.dart';
-import 'package:events_time_app_client/src/features/products/presentation/pages/view_product_page.dart';
 import 'package:events_time_microapp_ds/events_time_microapp_ds.dart';
+import 'package:events_time_microapp_menu/src/products/presentation/pages/view_product_page.dart';
+import 'package:events_time_microapp_menu/src/products/presentation/pages/widgets/increment_item_widget.dart';
 import 'package:flutter/material.dart';
+
 import 'example_data.dart';
 
 class ExampleCategorySection extends StatelessWidget {
@@ -54,7 +54,7 @@ class ExampleCategorySection extends StatelessWidget {
               Row(
                 children: [
                   Image.asset(
-                    AssetsImagesStrings.outback,
+                    '', // image here,
                     fit: BoxFit.cover,
                     height: 100,
                     width: 130,

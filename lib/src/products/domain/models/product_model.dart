@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:ffi';
 
-import 'package:events_time_app_client/src/features/products/domain/models/stand_model.dart';
+import 'package:events_time_microapp_menu/src/products/domain/models/stand_model.dart';
 
 class ProductModel {
   final String name;

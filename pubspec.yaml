@@ -17,7 +17,15 @@ dependencies:
     path: "../events_time_microapp_dependencies"
   events_time_microapp_hub:
     path: "../events_time_microapp_hub"
+  events_time_microapp_auth:
+    path: "../events_time_microapp_auth"
   equatable: ^2.0.5
+  # font_awesome_flutter: ^10.4.0
+  vertical_scrollable_tabview: ^0.1.0
+  scroll_to_index: ^3.0.1
+  # google_nav_bar: ^5.0.6
+  # line_awesome_flutter: ^2.0.0
+  # flutter_credit_card: ^3.0.7
 
 dev_dependencies:
   flutter_test:

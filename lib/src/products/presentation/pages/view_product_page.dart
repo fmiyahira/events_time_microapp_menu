@@ -1,6 +1,5 @@
-import 'package:events_time_app_client/src/features/commons/utils/strings/assets_images_strings.dart';
-import 'package:events_time_app_client/src/features/products/presentation/pages/widgets/action_positioned_top.dart';
 import 'package:events_time_microapp_ds/events_time_microapp_ds.dart';
+import 'package:events_time_microapp_menu/src/products/presentation/pages/widgets/action_positioned_top.dart';
 import 'package:flutter/material.dart';
 
 class ViewProductPage extends StatefulWidget {
@@ -36,7 +35,7 @@ class _ViewProductPageState extends State<ViewProductPage> {
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   fit: BoxFit.cover,
-                                  image: AssetImage(AssetsImagesStrings.ribs),
+                                  image: AssetImage(''), // image here
                                 ),
                               ),
                             ),

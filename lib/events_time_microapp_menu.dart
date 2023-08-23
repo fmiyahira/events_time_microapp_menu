@@ -1,7 +1,2 @@
-library events_time_microapp_menu;
-
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export './microapp/microapp_menu.dart';
+export 'src/core/utils/enums/menu_goal_enum.dart';
