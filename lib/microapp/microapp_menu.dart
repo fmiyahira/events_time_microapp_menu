@@ -7,6 +7,7 @@ import 'package:events_time_microapp_dependencies/events_time_microapp_dependenc
 import 'package:events_time_microapp_hub/events_time_microapp_hub.dart';
 import 'package:events_time_microapp_menu/microapp/routes.dart';
 import 'package:events_time_microapp_menu/src/core/utils/enums/menu_goal_enum.dart';
+import 'package:events_time_microapp_menu/src/products/core/register_dependencies_menu.dart';
 import 'package:flutter/material.dart';
 
 class MicroappMenuConfig {
@@ -65,6 +66,7 @@ class MicroappMenu extends ISubApp {
     // Register dependencies
     final List<IRegisterDependencies> listInternalDependencies =
         <IRegisterDependencies>[
+      RegisterDependenciesMenu()
       // RegisterDependenciesMenu(),
     ];
 
