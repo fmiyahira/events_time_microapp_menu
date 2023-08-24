@@ -1,36 +1,35 @@
 import 'dart:convert';
 
-import 'package:events_time_microapp_menu/src/products/domain/models/product_model.dart';
+import 'package:events_time_microapp_menu/src/products/domain/models/category_model.dart';
 
 class MenuModel {
-  final String name;
-  final List<ProductModel> products;
+  final List<CategoryModel> categories;
 
   MenuModel({
-    required this.name,
-    required this.products,
+    required this.categories,
   });
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'name': name,
-      'products': products,
+      'categories': categories,
     };
   }
 
   String toJson() => json.encode(toMap());
 
-  factory MenuModel.fromMap(Map<String, dynamic> map) {
+  factory MenuModel.fromMapExternal(Map<String, dynamic> map) {
     return MenuModel(
-      name: map['name'] as String,
-      products: map['products'] as List<ProductModel>,
+      categories: map['categories'] as List<CategoryModel>,
     );
   }
 
-  factory MenuModel.fromMapExternal(Map<String, dynamic> map) {
+  factory MenuModel.fromMap(List<dynamic> list) {
     return MenuModel(
-      name: map['name'] as String,
-      products: map['products'] as List<ProductModel>,
+      categories: List<CategoryModel>.from(
+        list.map<dynamic>(
+          (dynamic x) => CategoryModel.fromMap(x as Map<String, dynamic>),
+        ),
+      ),
     );
   }
 }

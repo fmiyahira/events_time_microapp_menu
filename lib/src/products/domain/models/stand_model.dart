@@ -1,29 +1,23 @@
 class StandModel {
+  final int id;
   final String name;
-  final bool isCashier;
 
   StandModel({
+    required this.id,
     required this.name,
-    required this.isCashier,
   });
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
+      'id': id,
       'name': name,
-      'isCashier': isCashier,
     };
   }
 
   factory StandModel.fromMap(Map<String, dynamic> map) {
     return StandModel(
+      id: map['id'] as int,
       name: map['name'] as String,
-      isCashier: map['is_cashier'] as bool,
     );
   }
 }
-
-// "id": 0,
-//     "name": "string",
-//     "is_cashier": true,
-//     "stand_category_id": 0,
-//     "event_id": 0

@@ -6,19 +6,17 @@ class MenuDatasourceImpl implements IMenuDatasource {
   static const String ENDPOINT_MENU_ID = '/api/mobile/products/menu';
   final IRequesting requesting;
 
-  MenuDatasourceImpl({
-    required this.requesting,
-  });
+  MenuDatasourceImpl(this.requesting);
 
   @override
   Future<MenuModel> getMenu(int eventId) async {
-    final RequestingResponse<dynamic> response = await requesting.post(
+    final RequestingResponse<dynamic> response = await requesting.get(
       ENDPOINT_MENU_ID,
-      queryParameters: {
+      queryParameters: <String, dynamic>{
         'event_id': eventId,
       },
     );
 
-    return MenuModel.fromMap(response.body as Map<String, dynamic>);
+    return MenuModel.fromMap(response.body as List<dynamic>);
   }
 }

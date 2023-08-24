@@ -1,9 +1,10 @@
 import 'package:events_time_microapp_ds/events_time_microapp_ds.dart';
+import 'package:events_time_microapp_menu/src/products/domain/models/category_model.dart';
+import 'package:events_time_microapp_menu/src/products/domain/models/product_model.dart';
 import 'package:events_time_microapp_menu/src/products/presentation/pages/view_product_page.dart';
 import 'package:events_time_microapp_menu/src/products/presentation/pages/widgets/increment_item_widget.dart';
 import 'package:flutter/material.dart';
-
-import 'example_data.dart';
+import 'package:intl/intl.dart';
 
 class ExampleCategorySection extends StatelessWidget {
   const ExampleCategorySection({
@@ -11,7 +12,7 @@ class ExampleCategorySection extends StatelessWidget {
     required this.category,
   });
 
-  final Category category;
+  final CategoryModel category;
 
   void _viewProduct(BuildContext context) {
     Navigator.push(
@@ -34,20 +35,20 @@ class ExampleCategorySection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             _buildSectionTileHeader(context),
-            _buildFoodTileList(context),
+            _buildProductTileList(context),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildFoodTileList(BuildContext context) {
+  Widget _buildProductTileList(BuildContext context) {
     return Column(
       children: List<Widget>.generate(
-        category.foods.length,
+        category.products.length,
         (int index) {
-          final Food food = category.foods[index];
-          final bool isLastIndex = index == category.foods.length - 1;
+          final ProductModel product = category.products[index];
+          final bool isLastIndex = index == category.products.length - 1;
           return Column(
             children: [
               const SizedBox(height: kLayoutSpacerXS),
@@ -65,18 +66,18 @@ class ExampleCategorySection extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         DSText(
-                          'Título do Outback',
+                          product.name,
                           type: DSTextType.NUMBER,
                         ),
                         const SizedBox(height: kLayoutSpacerXXXS),
                         DSText(
-                          'Barraca X',
+                          product.stand.name,
                           type: DSTextType.NUMBER_SMALL,
                           color: DSColors.primary.base,
                         ),
                         const SizedBox(height: kLayoutSpacerXXXS),
                         DSText(
-                          'Subtítulo do Outback asas as as as as as s aaaaaaaaaaaa as as as as a saassas as ',
+                          product.name,
                           type: DSTextType.LABEL_SMALL,
                         ),
                         const SizedBox(height: kLayoutSpacerXXXS),
@@ -90,7 +91,7 @@ class ExampleCategorySection extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   DSText(
-                    r'R$ 25,00',
+                    'R\$${NumberFormat.currency(locale: 'br', symbol: '').format(product.price)}',
                     type: DSTextType.NUMBER,
                   ),
                   IncrementItemWidget(count: 0),
@@ -121,43 +122,12 @@ class ExampleCategorySection extends StatelessWidget {
   Widget _sectionTitle(BuildContext context) {
     return Row(
       children: <Widget>[
-        DSText(category.title, type: DSTextType.HEADING3),
+        DSText(category.name, type: DSTextType.HEADING3),
       ],
     );
   }
 
-  Widget _buildFoodTile({
-    required BuildContext context,
-    required bool isLastIndex,
-    required Food food,
-  }) {
-    return Column(
-      children: <Widget>[
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Expanded(
-              flex: 2,
-              child: Container(
-                child: _buildFoodDetail(food: food, context: context),
-              ),
-            ),
-            const SizedBox(width: kLayoutSpacerXXS),
-            Expanded(child: Container(child: _buildFoodImage(food.imageUrl))),
-          ],
-        ),
-        if (!isLastIndex)
-          Divider(
-            height: kLayoutSpacerXS,
-            color: DSColors.neutral.s88,
-          )
-        else
-          const SizedBox(height: kLayoutSpacerXXS)
-      ],
-    );
-  }
-
-  Widget _buildFoodImage(String url) {
+  Widget _buildProductImage(String url) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(5), // Image border
       child: Image.asset(
@@ -165,42 +135,6 @@ class ExampleCategorySection extends StatelessWidget {
         width: 110,
         height: 80,
         fit: BoxFit.cover,
-      ),
-    );
-  }
-
-  Widget _buildFoodDetail({
-    required BuildContext context,
-    required Food food,
-  }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        DSText(
-          food.name,
-          type: DSTextType.NUMBER,
-        ),
-        const SizedBox(height: kLayoutSpacerXS),
-        DSText(
-          food.description,
-          type: DSTextType.BODY_SMALLER,
-        ),
-        const SizedBox(height: kLayoutSpacerXS),
-        DSText(
-          r'R$200,00',
-          type: DSTextType.HEADING4,
-        ),
-      ],
-    );
-  }
-
-  Widget _buildSectionHoteSaleIcon() {
-    return Container(
-      margin: const EdgeInsets.only(right: kLayoutSpacerXXXS),
-      child: DSIconButton(
-        icon: Icons.whatshot,
-        style: DSIconButtonStyle.values.first,
-        onPressed: () {},
       ),
     );
   }

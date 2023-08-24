@@ -14,10 +14,10 @@ class ExampleData {
   static Category category1 = Category(
     title: 'Categoria 1',
     isHotSale: true,
-    foods: List<Food>.generate(
+    foods: List<Product>.generate(
       5,
       (int index) {
-        return Food(
+        return Product(
           name: 'JUNIOR RIBS FOR TWO',
           description:
               'Duas Junior Ribs servidas com dois acompanhamentos, perfeitas para quem está em dupla. Combine com um dos nossos molhos: Barbecue ou Billabong. Acrescente um acompanhamento extra com um preço especial.',
@@ -32,10 +32,10 @@ class ExampleData {
   static Category category2 = Category(
     title: 'Categoria 2',
     isHotSale: true,
-    foods: List<Food>.generate(
+    foods: List<Product>.generate(
       5,
       (int index) {
-        return Food(
+        return Product(
           name: 'JUNIOR RIBS FOR TWO',
           description:
               'Duas Junior Ribs servidas com dois acompanhamentos, perfeitas para quem está em dupla. Combine com um dos nossos molhos: Barbecue ou Billabong. Acrescente um acompanhamento extra com um preço especial.',
@@ -50,10 +50,10 @@ class ExampleData {
   static Category category3 = Category(
     title: 'Categoria 3',
     isHotSale: true,
-    foods: List<Food>.generate(
+    foods: List<Product>.generate(
       5,
       (int index) {
-        return Food(
+        return Product(
           name: 'JUNIOR RIBS FOR TWO',
           description:
               'Duas Junior Ribs servidas com dois acompanhamentos, perfeitas para quem está em dupla. Combine com um dos nossos molhos: Barbecue ou Billabong. Acrescente um acompanhamento extra com um preço especial.',
@@ -68,10 +68,10 @@ class ExampleData {
   static Category category4 = Category(
     title: 'Categoria 4',
     isHotSale: true,
-    foods: List<Food>.generate(
+    foods: List<Product>.generate(
       5,
       (int index) {
-        return Food(
+        return Product(
           name: 'JUNIOR RIBS FOR TWO',
           description:
               'Duas Junior Ribs servidas com dois acompanhamentos, perfeitas para quem está em dupla. Combine com um dos nossos molhos: Barbecue ou Billabong. Acrescente um acompanhamento extra com um preço especial.',
@@ -86,10 +86,10 @@ class ExampleData {
   static Category category5 = Category(
     title: 'Categoria 5',
     isHotSale: true,
-    foods: List<Food>.generate(
+    foods: List<Product>.generate(
       5,
       (int index) {
-        return Food(
+        return Product(
           name: 'JUNIOR RIBS FOR TWO',
           description:
               'Duas Junior Ribs servidas com dois acompanhamentos, perfeitas para quem está em dupla. Combine com um dos nossos molhos: Barbecue ou Billabong. Acrescente um acompanhamento extra com um preço especial.',
@@ -104,10 +104,10 @@ class ExampleData {
   static Category category6 = Category(
     title: 'Categoria 6',
     isHotSale: true,
-    foods: List<Food>.generate(
+    foods: List<Product>.generate(
       5,
       (int index) {
-        return Food(
+        return Product(
           name: 'JUNIOR RIBS FOR TWO',
           description:
               'Duas Junior Ribs servidas com dois acompanhamentos, perfeitas para quem está em dupla. Combine com um dos nossos molhos: Barbecue ou Billabong. Acrescente um acompanhamento extra com um preço especial.',
@@ -122,10 +122,10 @@ class ExampleData {
   static Category category7 = Category(
     title: 'Categoria 7',
     isHotSale: true,
-    foods: List<Food>.generate(
+    foods: List<Product>.generate(
       5,
       (int index) {
-        return Food(
+        return Product(
           name: 'JUNIOR RIBS FOR TWO',
           description:
               'Duas Junior Ribs servidas com dois acompanhamentos, perfeitas para quem está em dupla. Combine com um dos nossos molhos: Barbecue ou Billabong. Acrescente um acompanhamento extra com um preço especial.',
@@ -140,7 +140,7 @@ class ExampleData {
 
 class Category {
   String title;
-  List<Food> foods;
+  List<Product> foods;
   bool isHotSale;
 
   Category({
@@ -150,14 +150,14 @@ class Category {
   });
 }
 
-class Food {
+class Product {
   String name;
   String description;
   String comparePrice;
   String imageUrl;
   bool isHotSale;
 
-  Food({
+  Product({
     required this.name,
     required this.description,
     required this.comparePrice,
